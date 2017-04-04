@@ -1,0 +1,73 @@
+﻿<div ng-controller="QuickQuoteCtrl">
+    <form ng-submit="saveTools()" name="quickQuoteForm" novalidate>
+        <table border="0">
+            <tr>
+                <th>
+                    Qty
+                </th>
+                <th>
+                    Machine
+                </th>
+                <th>
+                    Style
+                </th>
+                <th>
+                    Shape
+                </th>
+                <th>
+                    Size
+                </th>
+                <th>
+                    Notes
+                </th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="tool in tools" ng-form="repeatForm">
+                <td style="vertical-align: baseline">
+                    <input type="number" style="width: 30px; padding: 2px; height: 25px;" ng-model="tool.qty" name="qty" required />
+                    <div class="error" ng-show="repeatForm.qty.$invalid && repeatForm.qty.$dirty">
+                        <span ng-show="repeatForm.qty.$error.required">
+                            Number req'd
+                        </span>
+                    </div>
+                </td>
+                <td style="vertical-align: baseline">
+                    <input type="text" style="padding: 2px; height: 25px;" ng-model="tool.machine" />
+                </td>
+                <td style="vertical-align: baseline">
+                    <input type="text" style="padding: 2px; height: 25px;" ng-model="tool.style" />
+                </td>
+                <td style="vertical-align: baseline">
+                    <input type="text" style="padding: 2px; height: 25px;" ng-model="tool.shape" />
+                </td>
+                <td style="vertical-align: baseline">
+                    <input type="text" style="padding: 2px; height: 25px;" ng-model="tool.size" />
+                </td>
+                <td style="vertical-align: top">
+                    <textarea ng-model="tool.note" cols="40" style="padding: 2px; height: 25px;"></textarea>
+                </td>
+                <td style="vertical-align: top">
+                    <!--<button type="button" ng-click="removeTool($index)">Remove Tool</button>-->
+                    <a href='#' ng:click="removeTool($index)">
+                        <img src="images/Delete.png" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: left; padding-bottom: 25px;">
+                    <button style="height: 25px;" type="button" ng-click="addTool()">+ Add A Tool</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: center; padding-bottom: 15px;">
+                    <%--<button style="height: 25px;" type="button" ng-click="saveTools()">Save and View Quote Request</button>--%>
+                    <input type="submit" value="Submit" ng-disabled="quickQuoteForm.$invalid" />
+                </td>
+            </tr>
+        </table>
+        <%--<span class="summary" ng-class="quickQuoteForm.$valid ? 'ng-valid' : 'ng-invalid'">
+            <div>Valid: {{quickQuoteForm.$valid}}</div>
+        </span>
+        <div>Error: {{quickQuoteForm.$error}}</div>--%>
+    </form>
+</div>
