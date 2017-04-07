@@ -11,7 +11,6 @@
     $scope.valMsg = "";
 
     $scope.calculateTonnage = function () {
-        alert('you clicked it you dirty girl');
         if ($scope.squareHoleSize.length > 0 && $scope.materialThickness.length > 0) {
             $scope.valMsg = "";
             window.location.href = "#!/calcTonnage/square/" + $scope.squareHoleSize + "/" + "none" + "/" + $scope.materialThickness;

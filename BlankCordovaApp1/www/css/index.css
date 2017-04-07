@@ -1,97 +1,98 @@
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+html {
+            background-color: black;
+        }
+        form .ng-invalid.ng-dirty {
+            background-color: lightpink;
+        }
 
-body {
-    -webkit-touch-callout: none;
-    -webkit-text-size-adjust: none;
-    -webkit-user-select: none;
-	background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
-	
-    background-color:#32383d;
-    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
-    font-size:12px;
-}
+        .qtyMissing {
+            border-color: #990134 !important;
+            border-width: 2px;
+        }
 
-.app {
-    background: url(../images/cordova.png) no-repeat center top; 
-    position: absolute;             
-    left: 50%;
-    top: 50%;
-    height: 50px;                  
-    width: 225px;                   
-    text-align: center;
-    padding: 180px 0px 0px 0px;     
-    margin: -115px 0px 0px -112px;
-}
+        /*form .ng-valid.ng-dirty {
+                background-color: lightgreen;
+            }*/
 
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;
-        margin:-90px 0px 0px -198px;
-    }
-}
+        span.summary.ng-invalid {
+            color: red;
+            font-weight: bold;
+        }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
+        span.summary.ng-valid {
+            color: green;
+        }
 
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
+        div.error {
+            color: red;
+            font-weight: bold;
+        }
 
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
+        /*.auto-style1 {
+            width: 526px;
+            height: 346px;
+        }*/
 
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
+        .cartDivClass {
+            border: 1px solid #888888;
+        }
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
-}
+        .notSelected {
+            background-color: InfoBackground;
+        }
+
+        .Tonnage_fltRight {
+            float: right;
+            width: 25%;
+            text-align: right;
+            margin: 0 5px;
+        }
+
+        .Tonnage_left_Indent {
+            padding: 5px 10px 0 40px;
+            height: 30px;
+            background-color: #3d3d3d;
+            border-bottom: dotted 1px #808080;
+        }
+
+        .Tonnage_left {
+            padding: 5px 10px 0 10px;
+            height: 30px;
+            background-color: #3d3d3d;
+            border-bottom: dotted 1px #808080;
+        }
+
+        .Material_Tonnage_Hdr {
+            padding: 10px 10px 0 10px;
+            height: 30px;
+            background-color: #000000;
+            color: #ffcc33;
+        }
+
+        .Material_Type {
+            height: 30px;
+            background-color: #3d3d3d;
+            padding: 5px 0 0 10px;
+        }
+
+        .grad {
+            background: #6d6d6d; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#6d6d6d, #383838); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#6d6d6d, #383838); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#6d6d6d, #383838); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#6d6d6d, #383838); /* Standard syntax */
+        }
+        h1 {
+            font-family: Bitter, serif !important;
+            font-weight: bold;
+            font-size: 24px; 
+            line-height: 26px;
+        }
+        ul li{
+            list-style-type:none;
+            
+        }
+        ul {
+            margin-top: 0px !important;
+            margin-left: -10px;
+        }
