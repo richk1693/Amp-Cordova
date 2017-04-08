@@ -1,0 +1,31 @@
+﻿<link rel="stylesheet" type="text/css" href="./conversion/conversion.css">
+<div ng-controller="conversionController" class="grad" style="margin: 0 0; padding: 0;">
+    
+    <div class="ConversionHeader">Fractions:</div>
+    <div class="fractionContainer">
+        <div class="fractionDiv">
+            <input type="number" ng-model="fractionNum" ng-keypress="TestInput(evt)">           
+             <hr />
+            <input type="number" ng-model="fractionDen" ng-keypress="TestInput(evt)">
+        </div>        
+    </div>
+    <div> {{fractionNum}}/{{fractionDen}} in. = {{fracToDecimal(fractionNum, fractionDen)}} in. =  {{toMetric(fracToDecimal(fractionNum, fractionDen))}} mm</div>
+    <hr />
+
+
+    <div class="ConversionHeader">Metric: </div>
+    <input type="number" ng-model="toDecimalText" ng-keypress="TestInput(evt)">
+    <div> {{(toDecimalText=='')?0:toDecimalText}} mm = {{toDecimal(toDecimalText)}} in</div>
+    <hr />
+
+
+    <div class="ConversionHeader">Decimal: </div>
+    <input type="number" ng-model="toMetricText" ng-keypress="TestInput(evt)">
+    <div> {{(toMetricText=='')?0:toMetricText}} in. = {{toMetric(toMetricText)}} mm</div>
+
+
+    <div>
+        <button onclick="window.location.href='#!/'">Home</button>
+        <button>Contact Us</button>
+    </div>
+
