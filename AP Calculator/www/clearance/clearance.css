@@ -1,0 +1,27 @@
+﻿div{
+    color: gold;
+}
+
+input{
+    border-radius: 12px;
+    background: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 75px;
+    height: 25px;
+}
+
+button{
+    color: white;
+    background: #333;
+    border-color: #666;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+}
+
+.fractionContainer{
+    width:30%;
+}
