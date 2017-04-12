@@ -4,7 +4,7 @@
 
 
             $scope.isValid = function () {
-                if ($scope.punchSize < $scope.thickness) return false;
+                if ($scope.punchSize <= $scope.thickness) return false;
                 return true;
             };
 
@@ -32,59 +32,31 @@
                 return (parseInt(whole) + (numerator / denominator));
             }
 
-
-            //function gcd(a,  b)
-            //    {
-            //        var n = Math.min(a, b);
-            //        var gcd = 1, i = 1;
-
-            //        while (i <= n)
-            //        {
-            //            if (a % i == 0 && b % i == 0)
-            //            {
-            //                gcd = i;
-            //            }
-            //            i++;
-            //        }
-            //        return gcd;
-            //    }
-
-            //function calcDieClearance() {
-            //    //Fake rules as placeholder.
-            //    //If the punch is > 0.25 add 1/16th to it.
-            //    //If the material thickness is > .5 add 1/8th to it.
-
-            //    var decimalPunch = toDecimal($scope.punchSize); //numerator
-            //    var decimalThickness = toDecimal($scope.thickness); //denominator
-            //    var addition = 0;
-            //    var numerator = 0;
-            //    var denominator = 0;
-            //    var unknownVariable = 0;
-
-            //    if (decimalPunch > 0.25) {
-            //        addition += 0.0625;
-            //    }
-
-            //    if(decimalThickness > 0.5){
-            //        addition+= 0.125;
-            //    }
-
-            //    decimalPunch += addition;
-            //    var den = 10000000;
-            //    var decimalPunch = decimalPunch * den;
-
-            //}
             $scope.toFraction = function(dec) {
                 var result = new Fraction(dec);
                 return result.toString();
             };
 
 
-            $scope.calcResult = function (dec1, dec2) {
-                //fake rules until I know how to calc: the answer is the sum of the two.
-                var f1 = new Fraction(dec1);
-                var f2 = new Fraction(dec2);
-                return f1.add(f2).toString();
+            $scope.calcResult = function (punchSize, thickness) {
+                var punchFraction = new Fraction(punchSize);
+                //Material thickness of 1/8th less adds 1/64 of clearance.
+                if (thickness == .125) {
+                    return punchFraction.add(new Fraction(1, 64)).toString();
+                }
+                //Material thicknesses of 1/4 and 3/8 adds 1/32 of clearance
+                else if ((thickness == .25) || (thickness == .375)) {
+                    return punchFraction.add(new Fraction(1, 32)).toString();
+                }
+                //Clearance of 1/2 or 5/8 adds 1/16 clearance.
+                else if (thickness == .5 || thickness == .625) {
+                    return punchFraction.add(new Fraction(1, 16)).toString();
+                }
+                //Thickness of 3/4 adds adds 3/32 of clearance
+                else if (thickness == .75) {
+                    return punchFraction.add(new Fraction(3, 32)).toString();
+                }
+                //Calculate additional clearance based on 
             };
 
             $scope.invalidValues = "";
