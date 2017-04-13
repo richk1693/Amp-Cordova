@@ -1,0 +1,17 @@
+﻿select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.tonnageButtonContainer{
+    display:flex;
+    justify-content:center;
+    margin: auto;
+    width: 100%;
+}

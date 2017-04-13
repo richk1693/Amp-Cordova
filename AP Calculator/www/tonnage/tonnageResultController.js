@@ -72,4 +72,8 @@
             function capitalizeFirstLetter(theString) {
                 return theString.charAt(0).toUpperCase() + theString.slice(1);
             }
+
+            $scope.goBack = function () {
+                window.location.href = $scope.goBackUrl;
+            }
 }]);

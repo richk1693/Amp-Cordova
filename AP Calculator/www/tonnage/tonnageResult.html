@@ -1,15 +1,4 @@
 ﻿<div ng-controller="tonnageResultController" ng-cloak>
-
-    <h1>Calculate Required Tonnage for Punching Mild Steel - Tonnage Result</h1>
-    <div>
-        <span>
-            <a href="#!/Tonnage">Tonnage Home</a>
-        </span>
-        <span style="margin-left: 25px;">
-            <a href="{{goBackUrl}}">{{goBackText}}</a>
-        </span>
-
-    </div>
     <div style="margin-top:15px; padding-top: 20px; text-align: center; background-color: #3d3d3d;">
         <div style="margin-top:15px;">
             <img src="{{tonnageResultsImage}}" />
@@ -25,7 +14,7 @@
             Mat'l Thickness: {{tonnageMatlThickness}}
         </div><br />
         <div style="text-align: left; border: 1px solid #808080; width: 90%; margin: 0 auto; padding: 0 0 15px 0;">
-            <ul style="color: white; padding: 0;">
+            <ul style="color: white; padding-left: 10px;">
                 <li class='Material_Tonnage_Hdr' style="background-color: #000000;">Material<span class='Tonnage_fltRight' style='color: #ffcc33;'>Tonnage</span></li>
                 <li data-role='list-divider' class='Material_Type'>Structural Steel</li>
                 <li class='Tonnage_left_Indent'>50,000 tensile psi <span class='Tonnage_fltRight'>{{psi50k}}</span></li>
@@ -43,6 +32,10 @@
 
             <span style="color: #ffffff; ">Protect yourself and others. Extreme pressures are generated. Use all safety guards. It is the responsibility of the user to operate the machine and tooling in accordance with OSHA laws and ANSI B11.5 safety standards.</span><br>
             <br>
+        </div>
+        <div class="tonnageButtonContainer">
+            <button ng-click="goBack()">Back</button>
+            <button onclick="window.location.href='#!/'">Home</button>
         </div>
     </div>
     </div>

@@ -1,5 +1,4 @@
-﻿<h1>Calculate Required Tonnage for Punching Mild Steel - Square</h1>
-<a href="#!/">Tonnage Home</a>
+﻿<link rel="stylesheet" type="text/css" href="./tonnage/tonnage.css">
 <div ng-controller="tonnageSquareController" style="background-color: #3d3d3d;">
     <div style="margin-top:15px; padding-top: 20px; text-align: center; background-color: #3d3d3d;">
         <img src="./images/calc/schematic_Square.png" />
@@ -11,7 +10,7 @@
                     <label for="squareHoleSize" style="color: #ffffff;">Width (W):</label>
                 </td>
                 <td style="text-align: left; padding: 5px;">
-                    <select id="squareHoleSize" ng-model="squareHoleSize" ng-class="{notSelected: squareHoleSize.length == 0}" style="padding: 2px; height: 25px;">
+                    <select id="squareHoleSize" ng-model="squareHoleSize" ng-class="{notSelected: squareHoleSize.length == 0}">
                         <option value=''>SELECT</option>
                         <option value='.125'>1/8 </option>
                         <option value='.15625'>5/32 </option>
@@ -71,7 +70,7 @@
                     <label for="materialThickness" style="color: #ffffff;">Mat'l Thickness: </label>
                 </td>
                 <td style="text-align: right; padding: 5px;">
-                    <select id="materialThickness" ng-model="materialThickness" ng-class="{notSelected: materialThickness.length == 0}" style="padding: 2px; height: 25px;">
+                    <select id="materialThickness" ng-model="materialThickness" ng-class="{notSelected: materialThickness.length == 0}">
                         <option value=''>SELECT</option>
                         <option value='.060'>16ga</option>
                         <option value='.105'>12ga</option>
@@ -101,7 +100,12 @@
     <div style="margin-top: 15px; margin-bottom: 50px; ">
         <div style="color: #ffcc33; font-weight: bold; margin: 10px; text-align: center;" ng-bind-html="valMsg"></div>
         <div style="margin-top:15px; text-align: center; padding: 25px 0;">
-            <button style="height: 25px; width: 100px; background-color: lightgray !important; font-weight: bold;" type="button" ng-click="calculateTonnage()">Calculate</button>
+            <button ng-click="calculateTonnage()">Calculate</button>
         </div>
+    </div>
+
+    <div class="buttonContainer">
+        <button onclick="window.location.href='#!/Tonnage'">Back</button>
+        <button onclick="window.location.href='#!/contact'">Contact Us</button>
     </div>
 </div>
