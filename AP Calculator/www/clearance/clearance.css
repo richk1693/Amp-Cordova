@@ -1,15 +1,24 @@
-﻿div{
+﻿.Label{
     color: gold;
+    font-size: 18px;
+    font-family:sans-serif;
 }
 
-input{
-    border-radius: 12px;
-    background: black;
+.Result{
+    color:white;
+    font-size: 18px;
+    font-family:sans-serif;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color: black;
     color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 75px;
-    height: 25px;
+    padding: 8px;
+    border-radius: 12px;
 }
 
 button{
@@ -24,4 +33,10 @@ button{
 
 .fractionContainer{
     width:30%;
+}
+
+.optionContainer, .messageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

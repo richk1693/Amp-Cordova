@@ -2,8 +2,8 @@
 <div ng-controller="clearanceController" class="grad" style="margin: 0 0; padding: 0;">
 
     <div class="optionContainer">
-        <div>Punch Size:</div>
-        <select id="squareHoleSize" ng-model="punchSize" ng-class="{notSelected: squareHoleSize.length == 0}" style="padding: 2px; height: 25px;">
+        <div class="Label">Punch Size:</div>
+        <select id="squareHoleSize" ng-model="punchSize" ng-class="{notSelected: squareHoleSize.length == 0}">
             <option value=''>SELECT</option>
             <option value='.1875'>3/16 </option>
             <option value='.25'>1/4 </option>
@@ -30,10 +30,10 @@
             <option value='1.5'>1-1/2 </option>
         </select>
     </div>
-
+    <hr />
     <div class="optionContainer">
-        <div>Material Thickness:</div>
-        <select id="squareHoleSize" ng-model="thickness" ng-class="{notSelected: squareHoleSize.length == 0}" style="padding: 2px; height: 25px;">
+        <div class="Label">Material Thickness:</div>
+        <select id="squareHoleSize" ng-model="thickness" ng-class="{notSelected: squareHoleSize.length == 0}">
             <option value=''>SELECT</option>
             <option value='.125'>1/8 </option>
             <option value='.25'>1/4 </option>
@@ -42,22 +42,36 @@
             <option value='.625'>5/8 </option>
             <option value='.75'>3/4 </option>
         </select>
-
+    </div>
+         <hr />
         <div class="messageContainer">
             
-            <div ng-show="isIncomplete()">
+            <div class="Result" ng-show="isIncomplete()">
                 Please enter values.
             </div>
-            <div ng-show="!isIncomplete() && isValid()">
-                For:
-                Steel Thickness: {{toFraction(thickness)}}
-                Punch Size: {{toFraction(punchSize)}}
-
-               Recommended Die Size is : {{calcResult(punchSize, thickness)}}ea
+            <div class="Result" ng-show="!isIncomplete() && isValid()">
+               <div>
+                   Steel Thickness: {{toFraction(thickness)}}
+               </div>
+               <div>
+                   Punch Size: {{toFraction(punchSize)}}
+               </div>
+                
+                <div>
+                    Recommended Die Size is : {{calcResult(punchSize, thickness)}}
+                </div>
+               
             </div>
 
-            <div ng-show="!isIncomplete() && !isValid()">
-                Combination not recommended. Please call American Punch: <a href="tel:1-800-243-1492">1-800-243-1492</a>
+            <div class="Result" ng-show="!isIncomplete() && !isValid()">
+                <div>
+                    Combination not recommended.
+                </div> Please call American Punch: <a href="tel:18002431492">1-800-243-1492</a>
             </div>
         </div>
+   
+
+    <div class="buttonContainer">
+        <button onclick="window.location.href='#!/'">Home</button>
+        <button onclick="window.location.href='#!/contact'">Contact Us</button>
     </div>
