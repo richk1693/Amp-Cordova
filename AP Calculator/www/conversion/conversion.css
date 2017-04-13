@@ -1,8 +1,10 @@
-﻿div{
+﻿div {
     color: gold;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
-input{
+input {
     border-radius: 12px;
     background: black;
     color: white;
@@ -12,7 +14,7 @@ input{
     height: 25px;
 }
 
-button{
+button {
     color: white;
     background: #333;
     border-color: #666;
@@ -22,6 +24,27 @@ button{
     width: 100px;
 }
 
-.fractionContainer{
-    width:30%;
+.fractionDiv {
+    width: 30%;
+}
+
+.fractionContainer, .metricContainer, .decimalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.fractionTextDiv {
+    text-align: center;
+}
+
+.buttonContainer{
+    display:flex;
+    justify-content:center;
+    position: fixed;
+    bottom: 5px;
+    margin: auto;
+    width: 100%;
 }

@@ -8,6 +8,10 @@
                 templateUrl: "home/Home.html"
                 //templateUrl: "tonnage/tonnageHome.html"
             });
+            $routeProvider.when("/contact", {
+                templateUrl: "contact/contact.html"
+                //templateUrl: "tonnage/tonnageHome.html"
+            });
 
             $routeProvider.when("/Conversion", {
                 templateUrl: "conversion/conversion.html"

@@ -1,35 +1,33 @@
-﻿
+﻿<link rel="stylesheet" type="text/css" href="./home/home.css">
 <div ng-controller="tonnageHomeController" class="grad" style="margin: 0 0; padding: 0;">
-    <div>
-        <div>
-            <table style="width: 80%; margin: 0 auto;">
-                <tr>
-                    <td style="text-align: right;">
-                        <a href="#!/Tonnage">
-                            Placeholder Tonnage
-                        </a>
-                    </td>
-                    <td style="text-align: left;">
-                        <a href="#!/Conversion">
-                            Placeholder Conversion
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">
-                        <a href="#!/Clearance">
-                            Placeholder Clearance
-                        </a>
-                    </td>
-                    <td style="text-align: left;">
-                        <a href="#!/Diagonal">
-                            Placeholder Diagonal
-                        </a>
-                    </td>
-                </tr>
-            </table><br />
-            <h3 style="color: #ffffff; text-align: center;">App Home Placeholder</h3>
-            <br /><br />
+    <div class="HomeGridContainer">
+        <div class="GridRow">
+            <div class="GridItem">
+                <a href="#!/Tonnage">
+                    <img src="./images/btn_Tonnage.png" />
+                </a>
+            </div>
+            <div class="GridItem">
+                <a href="#!/Conversion" class="homeGridButton">
+                    <img src="./images/btn_Conversion.png" />
+                </a>
+            </div>
+        </div>
+        <div class="GridRow">
+            <div class="GridItem">
+                <a href="#!/Clearance" class="homeGridButton">
+                    <img src="./images/btn_Clearance.png" />
+                </a>
+            </div>
+            <div class="GridItem">
+                <a href="#!/Diagonal" class="homeGridButton">
+                    <img src="./images/btn_Diagonal.png" />
+                </a>
+            </div>
         </div>
     </div>
+    <div class="buttonContainer">
+        <button onclick="window.location.href='#!/contact'">Contact Us</button>
+    </div>
 </div>
+

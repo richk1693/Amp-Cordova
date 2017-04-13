@@ -1,0 +1,25 @@
+﻿.contactDiv {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.buttonContainer{
+    display:flex;
+    justify-content:center;
+    position: fixed;
+    bottom: 5px;
+    margin: auto;
+    width: 100%;
+}
+
+button{
+    color: white;
+    background: #333;
+    border-color: #666;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+}

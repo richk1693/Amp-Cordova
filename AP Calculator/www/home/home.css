@@ -1,0 +1,56 @@
+﻿a {
+   margin:auto;
+   color: Black;
+   text-decoration: none;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.HomeGridContainer{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height: 350px;
+    align-items: center;
+}
+
+.GridRow{
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    max-width: 300px
+}
+
+.GridItem{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.GridItem a{
+    background: url("../images/btn_Blank.png");
+    background-repeat:no-repeat;
+}
+
+button{
+    color: white;
+    background: #333;
+    border-color: #666;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+}
+
+.buttonContainer{
+    display:flex;
+    justify-content:center;
+    position: fixed;
+    bottom: 5px;
+    margin: auto;
+    width: 100%;
+}
