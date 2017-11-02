@@ -1,7 +1,17 @@
 {
-    "name": "AP Calculator",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
-    }
+  "name": "AP Calculator",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "cordova-android": "^6.3.0",
+    "cordova-plugin-whitelist": "1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }
